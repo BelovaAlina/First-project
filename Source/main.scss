@@ -1,0 +1,319 @@
+@font-face {
+    font-family: 'black_jackregular';
+    src: url('blackjack-webfont.eot');
+    src: url('blackjack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('blackjack-webfont.woff2') format('woff2'),
+         url('blackjack-webfont.woff') format('woff'),
+         url('blackjack-webfont.ttf') format('truetype'),
+         url('blackjack-webfont.svg#black_jackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("Proxima Nova Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("Proxima Nova Regular Italic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("Proxima Nova Bold Italic.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("Proxima Nova Semibold Italic.otf") format("opentype");
+    font-weight: bolder;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("Proxima Nova Light.otf") format("opentype");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+$main_font: "Proxima Nova", sans-serif;
+$main_font_size: 16px;
+$main_line_height: 25px;
+
+body {
+    font-family: $main_font;
+    font-size: $main_font_size;
+    line-height: $main_line_height;
+    width: 1260px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 940px;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+header {
+    height: 650px;
+    background: url(images/phone-header.png) no-repeat 230px 385px,
+                url(images/background-1.jpg);
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 60px;
+}
+
+.promo h1 {
+    font-family: 'black_jackregular';
+    font-size: 70px;
+    color: #fff;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.promo p {
+    font-family: $main_font;
+    font-weight: lighter;
+    font-size: 35px;
+    color: #fff;
+}
+
+.button {
+    width: 170px;
+    height: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 3px;
+    background: url("images/spritesheet.png") no-repeat;
+}
+
+.download-btn {
+    color: #fff;
+    background-position: 110px -130px;
+    border: 2px solid #fff;
+}
+
+.block-1 {
+    height: 650px;
+    background: url("images/phone1.png") no-repeat 920px 150px;
+    background-color: #f4f4f4;
+    
+    blockquote {
+        padding: 0;
+        padding-left: 20px;
+        border-left: 5px solid #4eacdd;
+        font-style: italic;
+        width: 500px;
+        color: #7e7e7e;
+        margin-left: 0;
+        margin-bottom: 65px;
+    }
+    
+    .hello-btn {
+        border: 2px solid #14af8f;
+        color: #14af8f;
+        background-position: -169px -5px;
+    }
+}
+
+.block-1 h2 {
+    font-weight: lighter;
+    font-size: 40px;
+    margin: 0;
+    color: #545454;
+    margin-top: 135px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+}
+
+.block-1 p {
+    width: 550px;
+    color: #7e7e7e;
+    margin-bottom: 25px;
+}
+
+.block-2 {
+    height: 650px;
+    background: url("images/block-2.png") no-repeat 0 290px;
+    background-color: #fff;
+    
+    .container {
+        align-items: flex-end;
+    }
+    
+    h2 {
+        padding: 0;
+        margin: 0;
+        margin-top: 95px;
+        margin-bottom: 35px;
+        width: 395px;
+        font-weight: lighter;
+        font-size: 40px;
+        color: #545454;
+        letter-spacing: -1px;
+        word-spacing: -1px;
+    }
+    
+    p:last-of-type {
+        width: 395px;
+        color: #7e7e7e;
+        word-spacing: 1px;
+        margin: 0;
+        margin-bottom: 60px;
+    }
+    
+    p:first-of-type {
+        font-weight: bolder;
+        font-style: italic;
+        color: #474e5d;
+        width: 395px;
+        margin-bottom: 30px;
+    }
+    
+    .view-btn {
+        color: #ea4c89;
+        background-position: -15px -15px;
+        border: 2px solid #ea4c89;
+        margin-right: 170px;
+    }
+}
+
+.block-3 {
+    height: 326px;
+    background: url("images/background-4.jpg") no-repeat;
+    background-color: #0fad8c;
+    
+    .container {
+        justify-content: center;
+        align-items: center;
+        height: 326px;
+    }
+    
+    h2 {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 35px;
+        color: #fff;
+        font-size: 40px;
+    }
+    
+    .buy-btn {
+        border: 2px solid #fff;
+        background-position: 165px -90px;
+        color: #fff;
+        width: 215px;
+        height: 50px;
+        box-shadow: -5px 5px 10px rgba(0, 1, 1, 0.2);
+        
+        span {
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+    
+}
+
+.social {
+    height: 650px;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .subscribe {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 65px;
+        list-style: none;
+    }
+}
+
+.subscribe li {
+    display: inline-block;
+    margin: 0;
+    margin-right: 33px;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+    
+    .button {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 3px solid #545454;
+        border-radius: 50%;
+    }
+    
+    .ball {
+        background-position: 0px -44px;
+    }
+    
+    .facebook {
+        background-position: 5px -180px;
+    }
+    
+    .twitter {
+        background-position: -2px -371px;
+    }
+    
+    .plan {
+        background-position: -6px -318px;
+    }
+}
+
+form label {
+    color: #545454;
+    font-weight: bolder;
+    font-style: italic;
+    margin-right: 17px;
+}
+
+input[type="email"] {
+    background-color: #fff;
+    width: 220px;
+    height: 42px;
+    border: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    
+    &:focus {
+        outline: none;
+        border: 2px solid rgb(229, 127, 133);
+        border-radius: 10px;
+        box-shadow: -1px -1px 5px rgb(229, 127, 133);
+        }
+    
+    placeholder {
+        font-size: 14px;
+        color: #d3d3d3;
+        font-style: italic;
+        font-weight: bolder;
+    }
+}
