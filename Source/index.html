@@ -12,14 +12,17 @@
         <header>
            <div class="container">
             <div class="header-logo">
-                <img src="images/logo.png" alt="logo" class="logo" width="114" height="115">
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Our production</a></li>
-                        <li><a href="#">Contacts</a></li>
-                    </ul>
-                </nav>
+                <img src="images/logo.png" alt="logo" class="logo" width="114" height="115" id="logo">
+                <div class="main-menu">
+                    <nav class="hidden-menu">
+                        <ul>
+                            <li><a href="#" class="menu-btn home">home</a></li>
+                            <li><a href="#" class="menu-btn about">about me</a></li>
+                            <li><a href="#" class="menu-btn portfolio">portfolio</a></li>
+                            <li><a href="#" class="menu-btn info">drop me a line</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
             <div class="promo">
                 <h1>Meet Perth,</h1>
@@ -64,14 +67,13 @@
             <form action="/echo" method="post">
                 <label for="email">Newsletter Subscription</label>
                 <input type="email" name="email" placeholder="Enter Email" id="email" autocomplete="on">
-                <input type="image" src="" alt="enter">
             </form>
         </div>
            
         <footer>
-            <div class="copy">
-                <p>&copy;2013 <a href="#">Perth.</a> Breeding pixels since the naughties.</p>
-                <a href="#" class="top"><img src="#" alt="top"></a>
+            <div class="container">
+                <p>&copy;2013 <a href="#logo">Perth.</a> <span>Breeding pixels since the naughties.</span></p>
+                <a href="#" class="top"></a>
             </div>
         </footer>
     </body>

@@ -45,6 +45,8 @@ body {
     font-family: "Proxima Nova", sans-serif;
     font-size: 16px;
     line-height: 25px;
+    font-weight: normal;
+    font-style: normal;
     width: 1260px;
     margin: 0 auto;
     padding: 0;
@@ -55,7 +57,6 @@ body {
     flex-direction: column;
     width: 940px;
     margin: 0 auto;
-    border: 1px solid #000;
 }
 
 header {
@@ -69,21 +70,106 @@ header {
     justify-content: space-between;
 }
 
+.header-logo .main-menu {
+    position: relative;
+    height: 4px;
+    width: 32px;
+    margin-top: 38px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 6px #fff, 0 12px #fff, 0 18px #fff;
+}
+
+.header-logo .main-menu:hover .hidden-menu {
+    display: flex;
+}
+
+.hidden-menu {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    top: -39px;
+    right: -160px;
+    position: absolute;
+    width: 1260px;
+    height: 650px;
+    background-color: rgba(229, 127, 133, 0.9);
+}
+
+.hidden-menu ul {
+    list-style: none;
+    margin: auto;
+    margin-left: 600px;
+    padding: 0;
+}
+
+.hidden-menu li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.hidden-menu li:last-of-type {
+    margin-bottom: 0;
+}
+
+.hidden-menu .menu-btn {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    padding: 0;
+}
+
+.hidden-menu .menu-btn::before {
+    position: absolute;
+    left: -70px;
+    top: -13px;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: url("images/spritesheet_header.png") no-repeat, #fff;
+    border-radius: 50%;
+}
+
+.hidden-menu .menu-btn:hover {
+    color: #d3d3d3;
+}
+
+.hidden-menu .home::before {
+    background-position: 13px 18px;
+}
+
+.hidden-menu .about::before {
+    background-position: 14px -45px;
+}
+
+.hidden-menu .portfolio::before {
+    background-position: 14px -109px;
+}
+
+.hidden-menu .info::before {
+    background-position: 14px -174px;
+}
+
 .promo {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 60px;
 }
 
 .promo h1 {
     font-family: 'black_jackregular';
     font-size: 70px;
+    line-height: 70px;
     color: #fff;
     font-weight: 300;
     padding: 0;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
+    margin-top: 55px;
 }
 
 .promo p {
@@ -91,11 +177,15 @@ header {
     font-weight: lighter;
     font-size: 35px;
     color: #fff;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
 }
 
 .button {
-    width: 170px;
-    height: 50px;
+    width: 173px;
+    height: 60px;
+    padding: 18px 25px;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 3px;
@@ -103,8 +193,9 @@ header {
 }
 
 .download-btn {
+    box-sizing: border-box;
     color: #fff;
-    background-position: 110px -130px;
+    background-position: 110px -127px;
     border: 2px solid #fff;
 }
 
@@ -126,9 +217,10 @@ header {
 }
 
 .block-1 .hello-btn {
+    box-sizing: border-box;
     border: 2px solid #14af8f;
     color: #14af8f;
-    background-position: -169px -5px;
+    background-position: 110px -220px;
 }
 
 .block-1 h2 {
@@ -187,8 +279,12 @@ header {
 }
 
 .block-2 .view-btn {
+    width: 225px;
+    height: 57px;
+    box-sizing: border-box;
+    padding: 18px 27px;
     color: #ea4c89;
-    background-position: -15px -15px;
+    background-position: 160px 8px;
     border: 2px solid #ea4c89;
     margin-right: 170px;
 }
@@ -215,11 +311,13 @@ header {
 
 .block-3 .buy-btn {
     border: 2px solid #fff;
-    background-position: 165px -90px;
+    background-position: 165px -87px;
     color: #fff;
-    width: 215px;
-    height: 50px;
+    width: 225px;
+    height: 57px;
+    box-sizing: border-box;
     box-shadow: -5px 5px 10px rgba(0, 1, 1, 0.2);
+    padding: 15px 30px;
 }
 
 .block-3 .buy-btn span {
@@ -255,6 +353,7 @@ header {
 
 .subscribe li .button {
     display: inline-block;
+    padding: 0;
     width: 50px;
     height: 50px;
     border: 3px solid #545454;
@@ -262,19 +361,39 @@ header {
 }
 
 .subscribe li .ball {
-    background-position: 0px -44px;
+    background-position: 0px -43px;
+}
+
+.subscribe li .ball:hover {
+    border-color: #ea4c89;
+    background-color: rgba(234, 76, 137, 0.2);
 }
 
 .subscribe li .facebook {
-    background-position: 5px -180px;
+    background-position: 6px -179px;
+}
+
+.subscribe li .facebook:hover {
+    border-color: #50a4f2;
+    background-color: rgba(80, 164, 242, 0.2);
 }
 
 .subscribe li .twitter {
     background-position: -2px -371px;
 }
 
+.subscribe li .twitter:hover {
+    border-color: #50e1f2;
+    background-color: rgba(80, 225, 242, 0.2);
+}
+
 .subscribe li .plan {
     background-position: -6px -318px;
+}
+
+.subscribe li .plan:hover {
+    border-color: #a19a9e;
+    background-color: rgba(161, 154, 158, 0.2);
 }
 
 form label {
@@ -292,20 +411,75 @@ input[type="email"] {
     border-radius: 10px;
     box-sizing: border-box;
     padding: 15px 20px;
+    padding-right: 40px;
 }
 
 input[type="email"]:focus {
     outline: none;
     border: 2px solid #e57f85;
     border-radius: 10px;
-    box-shadow: -1px -1px 5px #e57f85;
+    box-shadow: 0 0 10px 0 #e57f85;
 }
 
-input[type="email"] placeholder {
+input::-webkit-input-placeholder {
     font-size: 14px;
     color: #d3d3d3;
     font-style: italic;
     font-weight: bolder;
+}
+
+form {
+    position: relative;
+}
+
+form::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    width: 16px;
+    height: 13px;
+    background: url("images/spritesheet.png") no-repeat;
+    background-position: -15px -286px;
+}
+
+footer {
+    height: 100px;
+    background-color: #fff;
+}
+
+footer .container {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100px;
+    width: 1260px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #7e7e7e;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #6dc5ea;
+}
+
+footer p span {
+    font-style: italic;
+}
+
+footer .top {
+    margin-left: 380px;
+    margin-right: 60px;
+    height: 40px;
+    width: 40px;
+    background: url("images/to_top.png") no-repeat 50% 50%, #f4f4f4;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #717171;
 }
 
 
