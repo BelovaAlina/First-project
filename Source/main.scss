@@ -49,6 +49,12 @@ $main_font: "Proxima Nova", sans-serif;
 $main_font_size: 16px;
 $main_line_height: 25px;
 
+@keyframes move-icon {
+    50% {
+        -webkit-transform: translateY(-20px);transform: translateY(-20px);
+    }
+}
+
 body {
     font-family: $main_font;
     font-size: $main_font_size;
@@ -146,6 +152,13 @@ header {
         
         &:hover {
             color: #d3d3d3;
+            
+            &::before {
+                animation-name: move-icon;
+                animation-duration: 350ms;
+                animation-iteration-count: 2;
+                animation-timing-function: ease-in;
+            }
         }
     }
     
